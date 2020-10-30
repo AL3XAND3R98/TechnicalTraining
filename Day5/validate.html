@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validate</title>
+</head>
+<script type="text/javascript">
+	function check(){
+		let result=true;
+
+		if(document.getElementById("A").value==""){
+			document.getElementById("errorName").style.visibility='visible';
+			result=false;
+		}
+
+		if(document.getElementById("B").value==""){
+			document.getElementById("errorEmail").style.visibility='visible';
+			result=false;
+		}
+
+		if(document.getElementById("C").value==""){
+			document.getElementById("errorAddy").style.visibility='visible';
+			result=false;
+		}
+		return result;
+	}
+</script>
+
+<form action="www/bbc.co.uk" method="post" onsubmit="return check()">
+	Name:<input id="A"> <span id="errorName" style="color: red;visibility: hidden">**</span><br>
+	E-Mail:<input id="B"> <span id="errorEmail" style="color: red;visibility: hidden">**</span><br>
+	Address:<input id="C"> <span id="errorAddy" style="color: red;visibility: hidden">**</span><br>
+	<input type="submit">
+</form>
+
+
+</html>

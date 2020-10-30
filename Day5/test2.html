@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+
+
+First Number: <input id="no1" ><br>
+Second Number: <input id="no2"><br>
+
+<input id="b1" type="button" value="+" onclick="addition()">
+
+
+Result: <input id="result">
+<script>
+	let ref = window.document.getElementById('no1');
+	let ref1 = window.document.getElementById('no2')
+	let ref2 = window.document.getElementById('result')
+
+	
+	function addition()
+	{
+		if(ref.value=="")
+		{
+			alert("Please enter first number: ");
+			ref.focus()
+		}
+		else{
+			if(ref1.value=="")
+			{
+				alert("Please enter second number: ");
+				ref1.focus()
+			}
+			else{
+				ref2.value=parseInt(ref.value)+parseInt(ref1.value);
+			}
+		}
+
+	}
+
+	
+</script>
+</html>
