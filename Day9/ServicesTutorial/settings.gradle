@@ -1,0 +1,2 @@
+rootProject.name='ServicesTutorial'
+include ':app'
